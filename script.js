@@ -5,7 +5,7 @@
    storefront updates automatically on next load.
    ========================================================= */
 
-const WHATSAPP_NUMBER = "923461319507"; // TODO: replace with the real WhatsApp number, digits only, country code first (no +)
+const WHATSAPP_NUMBER = "923461319507"; // digits only, country code first (no +)
 
 /* ---------- Default catalog (seeded once, editable via admin.html) ---------- */
 const DEFAULT_PRODUCTS = [
@@ -157,27 +157,6 @@ const CATEGORY_ICONS = {
   "Watches":"⌚",
   "Accessories":"👝"
 };
-
-function renderCategories(){
-  const grid = document.getElementById("catGrid");
-  const cats = getCategories();
-  grid.innerHTML = Object.keys(cats).map(cat => `
-    <button class="cat-card" data-cat="${cat}">
-      <span class="cat-icon">${CATEGORY_ICONS[cat] || "🛍️"}</span>
-      <span class="cat-name">${cat}</span>
-      <span class="cat-count">${cats[cat]} items</span>
-    </button>
-  `).join("");
-
-  grid.querySelectorAll(".cat-card").forEach(btn => {
-    btn.addEventListener("click", () => {
-      activeFilter = btn.dataset.cat;
-      syncFilterChips();
-      renderProducts();
-      document.getElementById("shop").scrollIntoView({behavior:"smooth"});
-    });
-  });
-}
 
 function renderFilterChips(){
   const row = document.getElementById("filterRow");
@@ -415,7 +394,6 @@ function setupDepartments(){
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  renderCategories();
   renderFilterChips();
   renderProducts();
   updateCartUI();
