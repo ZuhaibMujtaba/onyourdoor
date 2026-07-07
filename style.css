@@ -151,20 +151,6 @@ button{font-family:inherit; cursor:pointer;}
   background:#fff; padding:10px; box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* ============ Categories ============ */
-.categories{padding:20px 0 50px;}
-.cat-grid{
-  display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:16px;
-}
-.cat-card{
-  background:var(--paper); border:1px solid var(--line); border-radius:16px;
-  padding:22px 16px; text-align:center; transition:transform .15s ease, border-color .15s ease;
-}
-.cat-card:hover{transform:translateY(-4px); border-color:var(--orange);}
-.cat-card .cat-icon{font-size:1.8rem; margin-bottom:10px; display:block;}
-.cat-card .cat-name{font-weight:700; font-size:0.92rem;}
-.cat-card .cat-count{display:block; font-size:0.75rem; color:var(--muted); margin-top:2px;}
-
 /* ============ Explore by Department ============ */
 .departments{
   padding:44px 0 50px;
