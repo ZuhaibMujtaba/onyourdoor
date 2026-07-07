@@ -5,7 +5,7 @@
    storefront updates automatically on next load.
    ========================================================= */
 
-const WHATSAPP_NUMBER = "923000000000"; // TODO: replace with the real WhatsApp number, digits only, country code first (no +)
+const WHATSAPP_NUMBER = "923461319507"; // TODO: replace with the real WhatsApp number, digits only, country code first (no +)
 
 /* ---------- Default catalog (seeded once, editable via admin.html) ---------- */
 const DEFAULT_PRODUCTS = [
